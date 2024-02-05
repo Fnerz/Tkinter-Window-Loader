@@ -55,7 +55,8 @@ class main:
     def load_window(self, window: list[list]) -> None:
         for widget in self.current_appyed_widgets.values():
             widget.place_forget()
-
+        self.current_appyed_widgets = {}
+        
         for widget_info in window:
             if widget_info[0] == "title":
                 self.window.title(widget_info[1])
